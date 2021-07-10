@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="543.0" prefWidth="600.0" style="-fx-background-color: #a9cce3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.Help">
+   <children>
+      <TextArea editable="false" layoutX="174.0" layoutY="66.0" prefHeight="200.0" prefWidth="200.0" style="-fx-control-inner-background: #eaf2f8;" text="    &#10;    ~ Introduction ~&#10;    Welcome to the Todo List App!&#10;&#10;    The app is a simple approach at a list application that lets you create items that you  &#10;    save and come back to for context. Examples of real-world uses of this app include &#10;    making a grocery store list of items to be bought or a simple chore list of tasks to be &#10;    completed around the house. The possibilities are endless!&#10;   &#10;    This section will help with understanding the basic functionality and utility of the app.&#10;    Below are the various help sections with information on what to do.&#10;    &#10;    ~ File Menu ~&#10;&#10;    ~ Edit Menu ~&#10;&#10;    ~ View Menu ~&#10;&#10;    ~ Right Click Utility ~&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;     &#10;" wrapText="true" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></TextArea>
+   </children>
+</AnchorPane>

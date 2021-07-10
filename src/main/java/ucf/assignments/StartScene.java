@@ -18,7 +18,6 @@ public class StartScene extends Application{
     public void start(Stage primaryStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("TodoListApp.fxml"));
-
             Scene scene = new Scene(root);
 
             primaryStage.setScene(scene);
@@ -28,5 +27,6 @@ public class StartScene extends Application{
         catch (IOException e){
             e.printStackTrace();
         }
+
     }
 }
