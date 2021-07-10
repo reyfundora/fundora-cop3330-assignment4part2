@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App_Controller {
+Open_Button_Click(ActionEvent actionEvent)
+
+Save_Single_Button_Click(ActionEvent actionEvent)
+
+Save_All_Button_Click(ActionEvent actionEvent)
+
+Close_Button_Click(ActionEvent actionEvent)
+
+New_List_Button_Click(ActionEvent actionEvent)
+
+New_Item_Button_Click(ActionEvent actionEvent)
+
+All_Button_Click(ActionEvent actionEvent)
+
+Completed_Button_Click(ActionEvent actionEvent)
+
+Incompleted_Button_Click(ActionEvent actionEvent)
+
+Started_Button_Click(ActionEvent actionEvent)
+
+About_Button_Click(ActionEvent actionEvent)
+
+list_rename_button_click(ActionEvent actionEvent)
+
+list_delete_button_click(ActionEvent actionEvent)
+
+mark_com_button_click(ActionEvent actionEvent)
+
+mark_incom_button_click(ActionEvent actionEvent)
+
+item_rename_button_click(ActionEvent actionEvent)
+
+item_redate_button_click(ActionEvent actionEvent)
+
+item_delete_button_click(ActionEvent actionEvent)
+
+}
+
+class main_class {
+main()
+start()
+}
+
+App_Controller -|> main_class
+App_Controller <|- main_class
+
+
+@enduml
