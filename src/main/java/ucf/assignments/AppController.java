@@ -4,7 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.MenuItem;
 
 public class AppController {
-    public MenuItem RCRename;
+    public MenuItem RCRename, FileSave, FileOpen, FileClose, EditNew, EditDelete, EditClearAll, ViewAll,
+                    ViewComplete, ViewIncomplete, GettingStarted, About, RCMarkComplete, RCMarkIncomplete,
+                    RCRedate, RCDelete;
 
     // Menu > File
     public void FileOpenClicked(ActionEvent actionEvent) {
@@ -38,9 +40,11 @@ public class AppController {
 
     // Menu > Help
     public void GettingStartedClicked(ActionEvent actionEvent) {
+        new Help().RunGettingStarted();
     }
 
     public void AboutClicked(ActionEvent actionEvent) {
+        new Help().RunAbout();
     }
 
     // Right Click Related
