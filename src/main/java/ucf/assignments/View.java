@@ -4,7 +4,7 @@ public class View {
 
     // For these three, there will be three dynamic lists that will hold values depending on
     // the "Item_right_click" class and selecting a view option will change where the
-    // table gets its data
+    // tableSetGet gets its data
 
     static void run_view_all() {
         // Click View > All

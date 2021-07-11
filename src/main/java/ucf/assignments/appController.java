@@ -1,21 +1,22 @@
 package ucf.assignments;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.MenuItem;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class appController {
-    @FXML
-    public MenuItem RCRename, FileSave, FileOpen, FileClose, EditNew, EditDelete, EditClearAll, ViewAll,
-                    ViewComplete, ViewIncomplete, GettingStarted, About, RCMarkComplete, RCMarkIncomplete,
-                    RCRedate, RCDelete;
+import static ucf.assignments.Edit.*;
 
-    @FXML
-    public TableColumn DueDateTable, DescriptionTable;
-    public void tableManager() {
-        this.DescriptionTable = DescriptionTable;
-        this.DueDateTable = DueDateTable;
-    }
+import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class appController implements Initializable {
 
     // Menu > File
     public void FileOpenClicked() {
@@ -75,4 +76,28 @@ public class appController {
     public void RCDeleteClicked() {
     }
 
+
+    // Table Controller
+    @FXML private TableView<tableSetGet> tableView;
+    @FXML private TableColumn<tableSetGet, String> dateColumn;
+    @FXML private TableColumn<tableSetGet, String> descriptionColumn;
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        if (this.dateColumn == null) { System.out.print(""); }
+
+        dateColumn.setCellValueFactory(new PropertyValueFactory("date"));
+        descriptionColumn.setCellValueFactory(new PropertyValueFactory("description"));
+
+        tableView.setItems(getTable());
+    }
+
+
+    public ObservableList<tableSetGet> getTable() {
+        ObservableList<tableSetGet> test = FXCollections.observableArrayList();
+
+        test.add(new tableSetGet("0", "1"));
+
+        return test;
+    }
 }

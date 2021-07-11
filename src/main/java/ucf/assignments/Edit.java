@@ -8,6 +8,8 @@ import javafx.scene.control.*;
 
 import java.io.*;
 import java.io.File;
+import java.lang.reflect.Array;
+import java.net.URL;
 import java.util.*;
 
 public class Edit {
@@ -18,7 +20,7 @@ public class Edit {
     @FXML
     public Button AddButton;
 
-    static ArrayList<String> items = new ArrayList<>();
+    static String[] items = new String[200];
     static int itemCounter = -1;
 
     // Prompt asking for description and date of item
@@ -49,9 +51,9 @@ public class Edit {
             Scanner read = new Scanner(input);
 
             itemCounter++;
-            items.add(itemCounter, read.nextLine());
+            items[0] = read.nextLine();
             itemCounter++;
-            items.add(itemCounter, read.nextLine());
+            items[1] = read.nextLine();
 
             Stage stage = (Stage) AddButton.getScene().getWindow();
             stage.close();
