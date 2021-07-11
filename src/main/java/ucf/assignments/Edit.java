@@ -21,7 +21,7 @@ public class Edit {
     public Button AddButton;
 
     static String[] items = new String[200];
-    static int itemCounter = -1;
+    static int itemCounter = 0;
 
     // Prompt asking for description and date of item
     public void runEditNew() {
@@ -40,28 +40,26 @@ public class Edit {
         }
     }
 
-        // After clicking 'add' in runEditNew popup window
-        public void AddButtonClicked() throws IOException {
-            FileWriter output = new FileWriter("itemAdd.txt");
-            output.write(AddDescription.getText() + "\n");
-            output.write(AddDate.getValue() + "\n");
-            output.close();
+    // After clicking 'add' in runEditNew popup window
+    public void AddButtonClicked() throws IOException {
+        FileWriter output = new FileWriter("itemAdd.txt");
+        output.write(AddDescription.getText() + "\n");
+        output.write(AddDate.getValue() + "\n");
+        output.close();
 
-            FileReader input = new FileReader("itemAdd.txt");
-            Scanner read = new Scanner(input);
+        FileReader input = new FileReader("itemAdd.txt");
+        Scanner read = new Scanner(input);
 
-            itemCounter++;
-            items[0] = read.nextLine();
-            itemCounter++;
-            items[1] = read.nextLine();
+        itemCounter++;
+        items[0] = read.nextLine();
+        itemCounter++;
+        items[1] = read.nextLine();
 
-            System.out.print(items[0] + items[1]);
+        System.out.print(items[0] + items[1]);
 
-            Stage stage = (Stage) AddButton.getScene().getWindow();
-            stage.close();
-
-            new appController().refresh();
-        }
+        Stage stage = (Stage) AddButton.getScene().getWindow();
+        stage.close();
+    }
 
     public void runEditDelete() {
         // Prompt the name of the List where you want to add the item

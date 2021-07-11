@@ -27,6 +27,5 @@ public class startScene extends Application{
         catch (IOException e){
             e.printStackTrace();
         }
-
     }
 }

@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane focusTraversable="true" pickOnBounds="false" prefHeight="218.0" prefWidth="370.0" style="-fx-background-color: #f9e79f;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.File">
+<AnchorPane focusTraversable="true" pickOnBounds="false" prefHeight="218.0" prefWidth="370.0" style="-fx-background-color: #abebc6;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.File">
     <children>
-        <Pane layoutX="-27.0" layoutY="-32.0" prefHeight="118.0" prefWidth="367.0" style="-fx-background-color: #fef9e7;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <Pane layoutX="-27.0" layoutY="-32.0" prefHeight="118.0" prefWidth="367.0" style="-fx-background-color: #eafaf1;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
             <children>
                 <Label layoutX="24.0" layoutY="14.0" prefHeight="20.0" prefWidth="320.0" text="The app saves your list in the form of a text file!">
                     <font>
