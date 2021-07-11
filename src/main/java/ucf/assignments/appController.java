@@ -5,6 +5,7 @@ import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -76,27 +77,25 @@ public class appController implements Initializable {
     public void RCDeleteClicked() {
     }
 
-
     // Table Controller
-    @FXML private TableView<tableSetGet> tableView;
-    @FXML private TableColumn<tableSetGet, String> dateColumn;
-    @FXML private TableColumn<tableSetGet, String> descriptionColumn;
+    @FXML public TableView<tableSetGet> tableView;
+    @FXML public TableColumn<tableSetGet, String> dateColumn;
+    @FXML public TableColumn<tableSetGet, String> descriptionColumn;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        if (this.dateColumn == null) { System.out.print(""); }
+        try {
+            dateColumn.setCellValueFactory(new PropertyValueFactory("date"));
+            descriptionColumn.setCellValueFactory(new PropertyValueFactory("description"));
 
-        dateColumn.setCellValueFactory(new PropertyValueFactory("date"));
-        descriptionColumn.setCellValueFactory(new PropertyValueFactory("description"));
-
-        tableView.setItems(getTable());
+            tableView.setItems(getTable());
+        }
+        catch (NullPointerException e) {System.out.print("null");}
     }
-
 
     public ObservableList<tableSetGet> getTable() {
         ObservableList<tableSetGet> test = FXCollections.observableArrayList();
-
-        test.add(new tableSetGet("0", "1"));
+        test.add(new tableSetGet(items[0], items[1]));
 
         return test;
     }

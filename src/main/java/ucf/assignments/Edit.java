@@ -55,6 +55,10 @@ public class Edit {
             itemCounter++;
             items[1] = read.nextLine();
 
+            System.out.print(items[0] + items[1]);
+
+            new appController().initialize(null, null);
+
             Stage stage = (Stage) AddButton.getScene().getWindow();
             stage.close();
         }
