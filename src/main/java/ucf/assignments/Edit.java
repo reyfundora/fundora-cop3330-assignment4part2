@@ -57,10 +57,10 @@ public class Edit {
 
             System.out.print(items[0] + items[1]);
 
-            new appController().initialize(null, null);
-
             Stage stage = (Stage) AddButton.getScene().getWindow();
             stage.close();
+
+            new appController().refresh();
         }
 
     public void runEditDelete() {
@@ -68,8 +68,6 @@ public class Edit {
         // int item_count = 0
         // item_count++
         // Create Hash Map with password being list name
-
-
     }
 
     public void runEditClear() {
