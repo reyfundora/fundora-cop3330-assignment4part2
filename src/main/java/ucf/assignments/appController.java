@@ -1,13 +1,21 @@
 package ucf.assignments;
 
-import javafx.scene.control.DatePicker;
+import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TableColumn;
 
-public class AppController {
+public class appController {
+    @FXML
     public MenuItem RCRename, FileSave, FileOpen, FileClose, EditNew, EditDelete, EditClearAll, ViewAll,
                     ViewComplete, ViewIncomplete, GettingStarted, About, RCMarkComplete, RCMarkIncomplete,
                     RCRedate, RCDelete;
+
+    @FXML
+    public TableColumn DueDateTable, DescriptionTable;
+    public void tableManager() {
+        this.DescriptionTable = DescriptionTable;
+        this.DueDateTable = DueDateTable;
+    }
 
     // Menu > File
     public void FileOpenClicked() {

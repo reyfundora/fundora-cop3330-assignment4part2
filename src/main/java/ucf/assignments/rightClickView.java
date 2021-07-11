@@ -1,6 +1,6 @@
 package ucf.assignments;
 
-public class RightClickView {
+public class rightClickView {
 
     static void run_mark_yes() {
         // Right click in item table area

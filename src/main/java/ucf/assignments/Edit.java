@@ -1,18 +1,25 @@
 package ucf.assignments;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
+import javafx.fxml.*;
+import javafx.scene.*;
+import javafx.scene.control.*;
 
-import java.io.IOException;
+import java.io.*;
+import java.io.File;
+import java.util.*;
 
 public class Edit {
+    @FXML
     public DatePicker AddDate;
+    @FXML
     public TextArea AddDescription;
+    @FXML
+    public Button AddButton;
+
+    static ArrayList<String> items = new ArrayList<>();
+    static int itemCounter = -1;
 
     // Prompt asking for description and date of item
     public void runEditNew() {
@@ -31,13 +38,24 @@ public class Edit {
         }
     }
 
-    // After clicking 'add' in runEditNew popup window
-    public void AddButtonClicked(ActionEvent actionEvent) {
-        DatePicker date = AddDate;
-        TextArea description = AddDescription;
+        // After clicking 'add' in runEditNew popup window
+        public void AddButtonClicked() throws IOException {
+            FileWriter output = new FileWriter("itemAdd.txt");
+            output.write(AddDescription.getText() + "\n");
+            output.write(AddDate.getValue() + "\n");
+            output.close();
 
+            FileReader input = new FileReader("itemAdd.txt");
+            Scanner read = new Scanner(input);
 
-    }
+            itemCounter++;
+            items.add(itemCounter, read.nextLine());
+            itemCounter++;
+            items.add(itemCounter, read.nextLine());
+
+            Stage stage = (Stage) AddButton.getScene().getWindow();
+            stage.close();
+        }
 
     public void runEditDelete() {
         // Prompt the name of the List where you want to add the item

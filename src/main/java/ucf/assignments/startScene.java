@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class StartScene extends Application{
+public class startScene extends Application{
 
     public static void main (String[] args) {
         launch(args);

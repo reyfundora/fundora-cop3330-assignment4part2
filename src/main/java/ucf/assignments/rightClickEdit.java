@@ -1,6 +1,6 @@
 package ucf.assignments;
 
-public class RightClickEdit {
+public class rightClickEdit {
     static void run_rename() {
         // Right click in item table area
         // String new_value = input
