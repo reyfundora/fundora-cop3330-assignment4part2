@@ -15,10 +15,10 @@ import java.io.IOException;
 
 public class Help {
 
-    public void RunGettingStarted() {
+    public void runGettingStarted() {
         // Prompts a pop up with a detailed paragraph on how to use the app
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("HelpPromptOne.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("promptTutorial.fxml"));
             Scene scene = new Scene(root);
 
             Stage popStage = new Stage();
@@ -30,13 +30,12 @@ public class Help {
             e.printStackTrace();
         }
     }
-    public void RunAbout() {
-        // Click Help > About
+    public void runAbout() {
         // Prompts a pop up with creator name, school name, class and professor names,
         // and copyright info.
 
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("HelpPromptTwo.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("promptAbout.fxml"));
             Scene scene = new Scene(root);
 
             Stage popStage = new Stage();

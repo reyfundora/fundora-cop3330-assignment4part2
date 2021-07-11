@@ -1,7 +1,8 @@
 package ucf.assignments;
 
-import javafx.event.ActionEvent;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
 
 public class AppController {
     public MenuItem RCRename, FileSave, FileOpen, FileClose, EditNew, EditDelete, EditClearAll, ViewAll,
@@ -9,58 +10,61 @@ public class AppController {
                     RCRedate, RCDelete;
 
     // Menu > File
-    public void FileOpenClicked(ActionEvent actionEvent) {
+    public void FileOpenClicked() {
     }
 
-    public void FileSaveClicked(ActionEvent actionEvent) {
+    public void FileSaveClicked() {
     }
 
-    public void FileCloseClicked(ActionEvent actionEvent) {
+    public void FileCloseClicked() {
     }
 
     // Menu > Edit
-    public void EditNewClicked(ActionEvent actionEvent) {
+    public void EditNewClicked() {
+        new Edit().runEditNew();
     }
 
-    public void EditDeleteClicked(ActionEvent actionEvent) {
+    public void EditDeleteClicked() {
+        new Edit().runEditDelete();
     }
 
-    public void EditClearAllClicked(ActionEvent actionEvent) {
+    public void EditClearAllClicked() {
+        new Edit().runEditClear();
     }
 
     // Menu > View
-    public void ViewAllClicked(ActionEvent actionEvent) {
+    public void ViewAllClicked() {
     }
 
-    public void ViewCompleteClicked(ActionEvent actionEvent) {
+    public void ViewCompleteClicked() {
     }
 
-    public void ViewIncompleteClicked(ActionEvent actionEvent) {
+    public void ViewIncompleteClicked() {
     }
 
     // Menu > Help
-    public void GettingStartedClicked(ActionEvent actionEvent) {
-        new Help().RunGettingStarted();
+    public void GettingStartedClicked() {
+        new Help().runGettingStarted();
     }
 
-    public void AboutClicked(ActionEvent actionEvent) {
-        new Help().RunAbout();
+    public void AboutClicked() {
+        new Help().runAbout();
     }
 
     // Right Click Related
-    public void RCMarkIncompleteClicked(ActionEvent actionEvent) {
+    public void RCMarkIncompleteClicked() {
     }
 
-    public void RCMarkCompleteClicked(ActionEvent actionEvent) {
+    public void RCMarkCompleteClicked() {
     }
 
-    public void RCRenameClicked(ActionEvent actionEvent) {
+    public void RCRenameClicked() {
     }
 
-    public void RCRedateClicked(ActionEvent actionEvent) {
+    public void RCRedateClicked() {
     }
 
-    public void RCDeleteClicked(ActionEvent actionEvent) {
+    public void RCDeleteClicked() {
     }
 
 }

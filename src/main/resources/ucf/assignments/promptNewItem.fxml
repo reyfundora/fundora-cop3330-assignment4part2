@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" pickOnBounds="false" prefHeight="190.0" prefWidth="370.0" style="-fx-background-color: #f9e79f;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.Edit">
+   <children>
+      <Pane layoutX="-27.0" layoutY="-32.0" prefHeight="118.0" prefWidth="367.0" style="-fx-background-color: #fef9e7;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <DatePicker fx:id="AddDate" layoutX="214.0" layoutY="60.0" prefHeight="25.0" prefWidth="130.0" promptText="Date" />
+            <Label layoutX="24.0" layoutY="14.0" prefHeight="20.0" prefWidth="320.0" text="Please select a description and due date below.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="AddDescription" layoutX="24.0" layoutY="60.0" prefHeight="61.0" prefWidth="179.0" promptText="Description" wrapText="true" />
+            <Button fx:id="AddButton" layoutX="277.0" layoutY="93.0" mnemonicParsing="false" onAction="#AddButtonClicked" prefHeight="25.0" prefWidth="67.0" text="Add">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
