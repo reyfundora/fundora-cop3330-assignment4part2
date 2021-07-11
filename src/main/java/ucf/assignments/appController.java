@@ -15,7 +15,6 @@ import java.util.ResourceBundle;
 public class appController implements Initializable {
 
     public MenuItem FileClose;
-
     @FXML
     public void FileCloseClicked() {
         Platform.exit();

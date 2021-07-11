@@ -26,8 +26,11 @@ public class Edit {
     // Prompt asking for description and date of item
     public void runEditNew() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("promptNewItem.fxml"));
-            Scene scene = new Scene(root);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("promptNewItem.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            Edit controller = loader.getController();
+            controller.appController = this;
 
             Stage popStage = new Stage();
             popStage.setScene(scene);
