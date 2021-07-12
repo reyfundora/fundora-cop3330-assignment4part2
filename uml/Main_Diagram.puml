@@ -2,8 +2,26 @@
 'https://plantuml.com/sequence-diagram
 
 class appController {
-Details found under
-"Controller_Diagram.puml"
+
+FileCloseClicked()
+FileOpenClicked()
+FileSaveClicked()
+ViewAllClicked()
+ViewCompleteClicked()
+ViewIncompleteClicked()
+RCMarkIncompleteClicked()
+RCMarkCompleteClicked()
+GettingStartedClicked()
+AboutClicked()
+
+--
+EditNewClicked
+EditDeleteClicked
+Initialize
+addTodoItem
+EditClearAllClicked
+deleteRCClicked
+
 }
 
 class Edit {
@@ -11,61 +29,38 @@ AddButtonClicked()
 DeleteOkClicked()
 }
 
-class File_Close {
-run_close()
-}
-
-class File_Save {
-run_single_save()
-run_all_save()
-}
-
-class Edit {
-run_new_list()
-run_new_item()
+class File {
+runOpen()
+AddButtonClicked
+runSave()
+AddButtonClicked2()
 }
 
 class View {
-run_view_all()
-run_view_yes()
-run_view_no()
+runViewAll()
+runViewYes()
+runViewNo()
 }
 
-class Item_Right_Click {
-run_mark_yes()
-run_mark_no()
-run_rename()
-run_delete()
-run_redate()
-}
-
-class List_Right_Click {
-run_rename()
-run_delete()
-}
 class Help {
-run_tutorial()
-run_about()
+AddButtonClicked2()
+runAbout()
 }
 
-class main_class {
+class startScene {
 main()
 start()
 }
 
 
 
-appController -|> main_class
-appController <|- main_class
+appController -|> startScene
+appController <|- startScene
 
-Edit -- main_class
-File_Close -- main_class
-File_Save -- main_class
-File_Open -- main_class
-Item_Right_Click -- main_class
-List_Right_Click -- main_class
-Help -- main_class
-View -- main_class
+Edit -- startScene
+File -- startScene
+Help -- startScene
+View -- startScene
 
 
 

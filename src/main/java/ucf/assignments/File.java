@@ -34,7 +34,7 @@ public class File {
         }
     }
 
-    public void AddButtonClicked(ActionEvent actionEvent) {
+    public void AddButtonClicked() {
     }
 
     public void runSave() {

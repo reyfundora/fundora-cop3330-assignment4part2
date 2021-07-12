@@ -11,18 +11,18 @@ public class View {
     // the "Item_right_click" class and selecting a view option will change where the
     // tableSetGet gets its data
 
-    static void run_view_all() {
+    static void runViewAll() {
         // Click View > All
         // Display List with all values
     }
 
-    static void run_view_yes() {
+    static void runViewYes() {
         // Click View > Completed
         // Display List with only 'Marked Complete'
 
     }
 
-    static void run_view_no() {
+    static void runViewNo() {
         // CLick View > Incompleted
         // Display List with only 'Marked Incomplete'
 
