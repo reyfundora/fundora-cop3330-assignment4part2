@@ -2,7 +2,7 @@ package ucf.assignments;
 
 import org.junit.jupiter.api.Test;
 
-public class Edit_Test {
+public class editTest {
 
     @Test
     void is_button_that_creates_new_list_working() {

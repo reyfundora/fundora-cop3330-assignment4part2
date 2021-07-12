@@ -56,6 +56,7 @@ public class Edit {
         appController.addTodoItem("     " + items.get(itemCounter) + "        " + items.get(itemCounter - 1));
     }
 
+    // After clicking 'Delete' in popup window
     public void DeleteOkClicked() {
         Stage stage = (Stage) OkButton.getScene().getWindow();
         stage.close();

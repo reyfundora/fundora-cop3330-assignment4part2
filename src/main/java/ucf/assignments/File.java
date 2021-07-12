@@ -19,6 +19,7 @@ public class File {
     public Button AddButton;
     public TextField saveInput;
 
+    // Prompts a window that asks for directory.
     public void runOpen() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("promptFileOpen.fxml"));
@@ -37,6 +38,7 @@ public class File {
     public void AddButtonClicked() {
     }
 
+    // Prompts a window that asks for directory.
     public void runSave() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("promptFileSave.fxml"));

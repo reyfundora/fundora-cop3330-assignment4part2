@@ -14,8 +14,8 @@ import java.io.IOException;
 
 public class Help {
 
+    // Prompts a pop up with a detailed paragraph on how to use the app
     public void runGettingStarted() {
-        // Prompts a pop up with a detailed paragraph on how to use the app
         try {
             Parent root = FXMLLoader.load(getClass().getResource("promptTutorial.fxml"));
             Scene scene = new Scene(root);
@@ -30,10 +30,9 @@ public class Help {
         }
     }
 
+    // Prompts a pop up with creator name, school name, class and professor names,
+    // and copyright info.
     public void runAbout() {
-        // Prompts a pop up with creator name, school name, class and professor names,
-        // and copyright info.
-
         try {
             Parent root = FXMLLoader.load(getClass().getResource("promptAbout.fxml"));
             Scene scene = new Scene(root);
