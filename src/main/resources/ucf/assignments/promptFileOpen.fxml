@@ -37,7 +37,7 @@
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
-                <TextField layoutX="25.0" layoutY="122.0" prefHeight="25.0" prefWidth="244.0" />
+                <TextField fx:id="openInput" layoutX="25.0" layoutY="122.0" prefHeight="25.0" prefWidth="244.0" promptText="Do not add &quot;C:&quot;" />
             </children>
         </Pane>
     </children>

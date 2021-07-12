@@ -32,12 +32,12 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="84.0" prefHeight="20.0" prefWidth="320.0" text="C:\\Users\\...\\...\\...">
+            <Label layoutX="25.0" layoutY="84.0" prefHeight="20.0" prefWidth="320.0" text="\\\Users\\...\\...\\...">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="25.0" layoutY="122.0" prefHeight="25.0" prefWidth="244.0" />
+            <TextField fx:id="saveInput" layoutX="25.0" layoutY="122.0" prefHeight="25.0" prefWidth="244.0" promptText="Do not add &quot;C:&quot;" />
             </children>
         </Pane>
     </children>

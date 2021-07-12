@@ -53,6 +53,14 @@ public class appController implements Initializable {
     public void ViewIncompleteClicked() {
     }
 
+    @FXML
+    public void RCMarkIncompleteClicked() {
+    }
+
+    @FXML
+    public void RCMarkCompleteClicked() {
+    }
+
     // Menu > Help
     @FXML
     public void GettingStartedClicked() {
@@ -63,28 +71,6 @@ public class appController implements Initializable {
     public void AboutClicked() {
         new Help().runAbout();
     }
-
-    // Right Click Related
-    @FXML
-    public void RCMarkIncompleteClicked() {
-    }
-
-    @FXML
-    public void RCMarkCompleteClicked() {
-    }
-
-    @FXML
-    public void RCRenameClicked() {
-    }
-
-    @FXML
-    public void RCRedateClicked() {
-    }
-
-    @FXML
-    public void RCDeleteClicked() {
-    }
-
 
     // Menu > Edit
     @FXML
@@ -142,11 +128,9 @@ public class appController implements Initializable {
     }
 
     public void EditClearAllClicked() {
-        items.clear();
-        listView.getSelectionModel().clearSelection();
+        listView.getItems().clear();
     }
 
-    // Delete Item Controller
     public void deleteRCClicked(ActionEvent actionEvent) {
         try {
             int index = listView.getSelectionModel().getSelectedIndex();

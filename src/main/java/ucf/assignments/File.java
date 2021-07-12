@@ -5,13 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class File {
 
     public Button AddButton;
+    public TextField saveInput;
 
     public void runOpen() {
         try {
@@ -48,6 +49,8 @@ public class File {
         }
     }
 
-    public void AddButtonClicked2(ActionEvent actionEvent) {
+    public void AddButtonClicked2() {
+        String input = saveInput.getText();
+        File dir = new File();
     }
 }
