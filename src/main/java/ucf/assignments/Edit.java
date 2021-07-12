@@ -1,15 +1,12 @@
 package ucf.assignments;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.skin.SliderSkin;
 import javafx.stage.Stage;
 import javafx.fxml.*;
-import javafx.scene.*;
 import javafx.scene.control.*;
 
 import java.io.*;
-import java.io.File;
-import java.lang.reflect.Array;
-import java.net.URL;
 import java.util.*;
 
 public class Edit {
@@ -19,29 +16,16 @@ public class Edit {
     public TextArea AddDescription;
     @FXML
     public Button AddButton;
+    @FXML
+    public Button DeleteButton;
+    @FXML
+    public TextField deleteNum;
 
-    static String[] items = new String[200];
-    static int itemCounter = 0;
+    public appController appController;
 
-    // Prompt asking for description and date of item
-    public void runEditNew() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("promptNewItem.fxml"));
-            Scene scene = new Scene(loader.load());
+    static ArrayList<String> items = new ArrayList<>();
+    static int itemCounter = -1, itemCounterTwo = 0;
 
-            Edit controller = loader.getController();
-            controller.appController = this;
-
-            Stage popStage = new Stage();
-            popStage.setScene(scene);
-            popStage.setTitle("New Item!");
-            popStage.setResizable(false);
-            popStage.show();
-        }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-    }
 
     // After clicking 'add' in runEditNew popup window
     public void AddButtonClicked() throws IOException {
@@ -54,26 +38,19 @@ public class Edit {
         Scanner read = new Scanner(input);
 
         itemCounter++;
-        items[0] = read.nextLine();
+        items.add(read.nextLine());
         itemCounter++;
-        items[1] = read.nextLine();
+        items.add(read.nextLine());
+        itemCounterTwo++;
 
-        System.out.print(items[0] + items[1]);
+        System.out.print(items.get(0) + items.get(1));
 
         Stage stage = (Stage) AddButton.getScene().getWindow();
         stage.close();
+
+        appController.addTodoItem(itemCounterTwo + ".    " + items.get(itemCounter) + "        " + items.get(itemCounter - 1));
     }
 
-    public void runEditDelete() {
-        // Prompt the name of the List where you want to add the item
-        // int item_count = 0
-        // item_count++
-        // Create Hash Map with password being list name
+    public void DeleteButtonClicked(ActionEvent actionEvent) {
     }
-
-    public void runEditClear() {
-
-    }
-
-
 }

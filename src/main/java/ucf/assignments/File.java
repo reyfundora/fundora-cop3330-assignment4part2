@@ -22,6 +22,8 @@ public class File {
             popStage.setScene(scene);
             popStage.setTitle("Open File");
             popStage.show();
+
+
         }
         catch (IOException e){
             e.printStackTrace();

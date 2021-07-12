@@ -24,6 +24,7 @@ public class Help {
             e.printStackTrace();
         }
     }
+
     public void runAbout() {
         // Prompts a pop up with creator name, school name, class and professor names,
         // and copyright info.
