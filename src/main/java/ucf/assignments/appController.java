@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -107,6 +108,18 @@ public class appController implements Initializable {
 
     @FXML
     public void EditDeleteClicked() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("promptDelete.fxml"));
+            Scene scene = new Scene(root);
+
+            Stage popStage = new Stage();
+            popStage.setScene(scene);
+            popStage.setTitle("Delete Item!");
+            popStage.show();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
 
@@ -132,6 +145,14 @@ public class appController implements Initializable {
         listView.getSelectionModel().clearSelection();
     }
 
-    public void DeleteButtonClicked(ActionEvent actionEvent) {
+    // Delete Item Controller
+    public void deleteRCClicked(ActionEvent actionEvent) {
+        try {
+            int index = listView.getSelectionModel().getSelectedIndex();
+
+            if (index >= 0)
+                listView.getItems().remove(index);
+        }
+        catch (NullPointerException e) { System.out.print("null"); }
     }
 }

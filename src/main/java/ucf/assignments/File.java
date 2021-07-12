@@ -33,7 +33,6 @@ public class File {
     public void AddButtonClicked(ActionEvent actionEvent) {
     }
 
-
     public void runSave() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("promptFileSave.fxml"));

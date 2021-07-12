@@ -1,6 +1,9 @@
 package ucf.assignments;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.skin.SliderSkin;
 import javafx.stage.Stage;
 import javafx.fxml.*;
@@ -16,15 +19,13 @@ public class Edit {
     public TextArea AddDescription;
     @FXML
     public Button AddButton;
-    @FXML
-    public Button DeleteButton;
-    @FXML
-    public TextField deleteNum;
 
     public appController appController;
+    public appController listView;
 
     static ArrayList<String> items = new ArrayList<>();
     static int itemCounter = -1, itemCounterTwo = 0;
+    public Button OkButton;
 
 
     // After clicking 'add' in runEditNew popup window
@@ -41,16 +42,17 @@ public class Edit {
         items.add(read.nextLine());
         itemCounter++;
         items.add(read.nextLine());
-        itemCounterTwo++;
 
         System.out.print(items.get(0) + items.get(1));
 
         Stage stage = (Stage) AddButton.getScene().getWindow();
         stage.close();
 
-        appController.addTodoItem(itemCounterTwo + ".    " + items.get(itemCounter) + "        " + items.get(itemCounter - 1));
+        appController.addTodoItem("     " + items.get(itemCounter) + "        " + items.get(itemCounter - 1));
     }
 
-    public void DeleteButtonClicked(ActionEvent actionEvent) {
+    public void DeleteOkClicked() {
+        Stage stage = (Stage) OkButton.getScene().getWindow();
+        stage.close();
     }
 }
