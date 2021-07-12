@@ -1,13 +1,14 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-class App_Controller {
+class appController {
 Details found under
 "Controller_Diagram.puml"
 }
 
-class File_Open {
-run_open()
+class Edit {
+AddButtonClicked()
+DeleteOkClicked()
 }
 
 class File_Close {
@@ -54,8 +55,8 @@ start()
 
 
 
-App_Controller -|> main_class
-App_Controller <|- main_class
+appController -|> main_class
+appController <|- main_class
 
 Edit -- main_class
 File_Close -- main_class
