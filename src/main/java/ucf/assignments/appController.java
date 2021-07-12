@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.TextFieldListCell;
 import javafx.stage.Stage;
 
 import static ucf.assignments.Edit.*;
@@ -131,7 +132,7 @@ public class appController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         try {
             listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-            listView.getSelectionModel().clearSelection();
+            listView.setCellFactory(TextFieldListCell.forListView());
         }
         catch (NullPointerException e) { System.out.print(""); }
     }
